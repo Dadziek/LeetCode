@@ -3,19 +3,18 @@ class Solution(object):
         if target in nums:
             left = 0
             right = len(nums) - 1
-            mid = (left + right) // 2
 
             while left <= right:
+                mid = (left + right) // 2
+
                 if nums[mid] == target:
                     return mid
 
                 elif nums[mid] < target:
-                    left = mid
-                    mid = (left + right) // 2
+                    left = mid + 1
                 
                 else:
-                    right = mid
-                    mid = (left + right) // 2
+                    right = mid - 1
         else:
             for index, element in enumerate(nums):
                 if target < element:
