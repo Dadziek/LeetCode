@@ -1,6 +1,6 @@
-class Solution:
-    def findMaxK(self, nums: List[int]) -> int:
-        maxi = -1
+class Solution(object):
+    def findMaxK(self, nums):
+                maxi = -1
         for i in nums:
             p = i * (-1)
             if p in nums:
@@ -10,3 +10,4 @@ class Solution:
                     if maxi < p:
                         maxi = p
         return maxi
+        
