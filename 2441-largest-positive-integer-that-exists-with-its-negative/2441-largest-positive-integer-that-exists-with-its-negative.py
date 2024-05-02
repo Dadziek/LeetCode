@@ -1,6 +1,6 @@
 class Solution(object):
     def findMaxK(self, nums):
-                maxi = -1
+        maxi = -1
         for i in nums:
             p = i * (-1)
             if p in nums:
