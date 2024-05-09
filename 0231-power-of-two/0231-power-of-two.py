@@ -1,10 +1,3 @@
-class Solution(object):
-    def isPowerOfTwo(self, n):
-        if n == 1:
-            return True
-        else:
-            while n != 1:
-                if n % 2 != 0:
-                    return False
-                n //= 2
-            return True
+class Solution:
+    def isPowerOfTwo(self, n: int) -> bool:
+        return False if n < 0 else bin(n).count('1') == 1
